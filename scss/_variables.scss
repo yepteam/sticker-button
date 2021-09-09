@@ -1,0 +1,14 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+$btn-sticker-angle: 30deg !default;
+$btn-sticker-bend-size: 0.25 !default;
+$btn-sticker-bend-bg-color: rgba(255, 255, 255, 1) !default;
+$btn-sticker-line-height: 1.5 !default;
+$btn-sticker-padding-y: 0.75rem !default;
+$btn-sticker-padding-x: 1.5rem !default;
+$btn-sticker-font-size: 2rem !default;
+$btn-sticker-transition-time: 0.3s !default;
+$btn-sticker-transition-function: ease-out !default;

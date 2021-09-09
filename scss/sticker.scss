@@ -1,0 +1,181 @@
+/*!
+ * Sticker v1.0.1
+ * Copyright 2021-2021 Arthur Shlain
+ * Copyright 2021-2021 Yep!
+ * Licensed under MIT (https://github.com/yepteam/sticker-button/blob/main/LICENSE)
+ */
+
+@use "sass:math";
+
+// Configuration
+@import "functions";
+@import "variables";
+
+$btn-transition: clip-path $btn-sticker-transition-time
+$btn-sticker-transition-function;
+$corner-transition: transform $btn-sticker-transition-time
+$btn-sticker-transition-function;
+
+$btn-sticker-height: (
+        $btn-sticker-padding-y * 2 + $btn-sticker-font-size * $btn-sticker-line-height
+);
+
+$btn-sticker-bend-width: $btn-sticker-height * $btn-sticker-bend-size;
+
+// clip points calculation
+
+$L: $btn-sticker-angle;
+$LL: 90deg - $btn-sticker-angle;
+
+$cosL: cos($L);
+$cosLL: cos($LL);
+$sinL: sin($L);
+
+$AE: strip-unit($btn-sticker-height / 2);
+$AB: strip-unit($btn-sticker-height / 2 - $btn-sticker-bend-width);
+$XB: strip-unit($btn-sticker-bend-width);
+$NE: $AE;
+$CM: $AE;
+
+$AC: $AB / $cosL;
+$AD: $AB / $cosLL;
+$CF: $CM / $cosL;
+$FM: $CF * $cosLL;
+$EF: $AC - $FM;
+$NF: $NE - $EF;
+$EG: $AC + $FM;
+
+// hover clip points calculation
+$AQ: $XB * $cosL;
+$BQ: $XB * $sinL;
+
+// base clip points
+
+$point_1_x: 0;
+$point_1_y: 0;
+
+$point_2_x: calc(100% - #{$NF * 1rem});
+$point_2_y: 0;
+
+$point_3_x: calc(100% - #{$NF * 1rem});
+$point_3_y: 0;
+
+$point_4_x: calc(100% + #{($EG - $AE) * 1rem});
+$point_4_y: 100%;
+
+$point_5_x: calc(100% + #{($EG - $AE) * 1rem});
+$point_5_y: 100%;
+
+$point_6_x: 0;
+$point_6_y: 100%;
+
+// hover clip points
+
+$hover_point_1_x: 0;
+$hover_point_1_y: 0;
+
+$hover_point_2_x: calc(100% - #{$NF * 1rem});
+$hover_point_2_y: 0;
+
+$hover_point_3_x: calc(100% - #{$NF * 1rem} + #{$AQ * 1rem});
+$hover_point_3_y: #{$BQ * -1rem};
+
+$hover_point_4_x: calc(100% + #{($EG - $AE) * 1rem} + #{$AQ * 1rem});
+$hover_point_4_y: calc(100% - #{$BQ * 1rem});
+
+$hover_point_5_x: calc(100% + #{($EG - $AE) * 1rem});
+$hover_point_5_y: 100%;
+
+$hover_point_6_x: 0;
+$hover_point_6_y: 100%;
+
+//
+
+$btn-sticker-fold-clip-path: polygon(
+                $point_1_x $point_1_y,
+                $point_2_x $point_2_y,
+                $point_3_x $point_3_y,
+                $point_4_x $point_4_y,
+                $point_5_x $point_5_y,
+                $point_6_x $point_6_y
+);
+
+$btn-sticker-unfold-clip-path: polygon(
+                $hover_point_1_x $hover_point_1_y,
+                $hover_point_2_x $hover_point_2_y,
+                $hover_point_3_x $hover_point_3_y,
+                $hover_point_4_x $hover_point_4_y,
+                $hover_point_5_x $hover_point_5_y,
+                $hover_point_6_x $hover_point_6_y
+);
+
+$btn-sticker-fold-corner-transform: rotate(-$btn-sticker-angle)
+translateX($btn-sticker-height - $btn-sticker-bend-width * 2);
+
+$btn-sticker-unfold-corner-transform: rotate(-$btn-sticker-angle)
+translateX($btn-sticker-height);
+
+// .btn-sticker class
+
+.btn-sticker {
+  display: inline-block;
+  border-width: 0;
+  border-radius: $btn-sticker-height / 2;
+  font-size: $btn-sticker-font-size;
+  line-height: $btn-sticker-line-height;
+  white-space: nowrap;
+  padding: $btn-sticker-padding-y $btn-sticker-padding-x;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  clip-path: $btn-sticker-fold-clip-path;
+  transition: $btn-transition;
+  box-sizing: border-box;
+  &::after {
+    background-color: $btn-sticker-bend-bg-color;
+    content: "";
+    position: absolute;
+    display: block;
+    height: $btn-sticker-height;
+    width: $btn-sticker-height;
+    top: 0;
+    right: 0;
+    border-radius: 50rem;
+    opacity: 1;
+    transition: $corner-transition;
+    transform: $btn-sticker-fold-corner-transform;
+    border: 0 solid #fff;
+  }
+  &:hover {
+    clip-path: $btn-sticker-unfold-clip-path;
+    &::after {
+      transform: $btn-sticker-unfold-corner-transform;
+    }
+  }
+}
+
+.btn-sticker-shadow {
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+.btn-sticker-on-hover {
+  clip-path: $btn-sticker-unfold-clip-path;
+  &::after {
+    transform: $btn-sticker-unfold-corner-transform;
+  }
+  &:hover {
+    clip-path: $btn-sticker-fold-clip-path;
+    &::after {
+      transform: $btn-sticker-fold-corner-transform;
+    }
+  }
+}
+
+.btn-sticker-static {
+  &:hover {
+    clip-path: $btn-sticker-fold-clip-path;
+    &::after {
+      transform: $btn-sticker-fold-corner-transform;
+    }
+  }
+}
