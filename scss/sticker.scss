@@ -8,8 +8,8 @@
 @use "sass:math";
 
 // Configuration
-@import "scss/functions";
-@import "scss/variables";
+@import "functions";
+@import "variables";
 
 $btn-transition: clip-path $btn-sticker-transition-time
 $btn-sticker-transition-function;
