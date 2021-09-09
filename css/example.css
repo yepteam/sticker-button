@@ -1,0 +1,85 @@
+/*!
+ * Sticker v1.0.1
+ * Copyright 2021-2021 Arthur Shlain
+ * Copyright 2021-2021 Yep!
+ * Licensed under MIT (https://github.com/yepteam/sticker-button/blob/main/LICENSE)
+ */
+.btn-sticker {
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-radius: 50rem;
+  white-space: nowrap;
+  position: relative;
+  transition: clip-path 0.3s ease-out;
+  border-width: 2px;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%); }
+  .btn-sticker::after {
+    height: 4.25rem;
+    width: 4.25rem;
+    top: -2px;
+    right: -2px;
+    transform: rotate(-30deg) translateX(1.7rem); }
+  .btn-sticker:hover {
+    clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem + 1.1041823898rem) -0.6375rem, calc(100% + 0.0833647797rem + 1.1041823898rem) calc(100% - 0.6375rem), calc(100% + 0.0833647797rem) 100%, 0 100%); }
+    .btn-sticker:hover::after {
+      transform: rotate(-30deg) translateX(4.25rem); }
+  .btn-sticker.btn-sticker-hover {
+    clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem + 1.1041823898rem) -0.6375rem, calc(100% + 0.0833647797rem + 1.1041823898rem) calc(100% - 0.6375rem), calc(100% + 0.0833647797rem) 100%, 0 100%); }
+    .btn-sticker.btn-sticker-hover::after {
+      transform: rotate(-30deg) translateX(4.25rem); }
+    .btn-sticker.btn-sticker-hover:hover {
+      clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%); }
+      .btn-sticker.btn-sticker-hover:hover::after {
+        transform: rotate(-30deg) translateX(1.7rem); }
+  .btn-sticker.btn-sticker-static:hover {
+    clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%); }
+    .btn-sticker.btn-sticker-static:hover::after {
+      transform: rotate(-30deg) translateX(1.7rem); }
+  .btn-sticker::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 50rem;
+    background-color: white;
+    border: 0 solid white;
+    transition: transform 0.3s ease-out; }
+  .btn-sticker-shadow {
+    filter: drop-shadow(0 1rem 0.5rem rgba(0, 0, 0, 0.25)); }
+
+.btn-outline-success::after {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--bs-success); }
+
+.btn-sticker-example-1 {
+  border-width: 2px;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%); }
+  .btn-sticker-example-1::after {
+    height: 4.25rem;
+    width: 4.25rem;
+    top: -2px;
+    right: -2px;
+    transform: rotate(20deg) translateX(1.7rem); }
+  .btn-sticker-example-1:hover {
+    clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem + 1.1981080915rem) 0.4360756827rem, calc(100% + -1.9938856412rem + 1.1981080915rem) calc(100% - -0.4360756827rem), calc(100% + -1.9938856412rem) 100%, 0 100%); }
+    .btn-sticker-example-1:hover::after {
+      transform: rotate(20deg) translateX(4.25rem); }
+  .btn-sticker-example-1.btn-sticker-hover {
+    clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem + 1.1981080915rem) 0.4360756827rem, calc(100% + -1.9938856412rem + 1.1981080915rem) calc(100% - -0.4360756827rem), calc(100% + -1.9938856412rem) 100%, 0 100%); }
+    .btn-sticker-example-1.btn-sticker-hover::after {
+      transform: rotate(20deg) translateX(4.25rem); }
+    .btn-sticker-example-1.btn-sticker-hover:hover {
+      clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%); }
+      .btn-sticker-example-1.btn-sticker-hover:hover::after {
+        transform: rotate(20deg) translateX(1.7rem); }
+  .btn-sticker-example-1.btn-sticker-static:hover {
+    clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%); }
+    .btn-sticker-example-1.btn-sticker-static:hover::after {
+      transform: rotate(20deg) translateX(1.7rem); }
+
+/*# sourceMappingURL=example.css.map */
