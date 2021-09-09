@@ -1,0 +1,75 @@
+@mixin sticker-variant($angle, $bend, $line-height, $padding-x, $padding-y, $font-size, $border-width){
+
+  $height: sticker-height($border-width, $padding-y, $font-size, $line-height);
+  $bend-width: $height * $bend;
+
+  $cosL: cos($angle);
+  $cosLL: cos(90deg - $angle);
+  $sinL: sin($angle);
+
+  $AE: strip-unit($height / 2);
+  $AB: strip-unit($height / 2 - $bend-width);
+  $AC: $AB / $cosL;
+  $CF: $AE / $cosL;
+  $FM: $CF * $cosLL;
+  $EG: $AC + $FM;
+  $FN: $AE - ($AC - $FM);
+
+  $AQ: strip-unit($bend-width) * $cosL;
+  $BQ: strip-unit($bend-width) * $sinL;
+
+  $fold-clip-path: sticker-fold-clip-path($AE, $EG, $FN);
+  $unfold-clip-path: sticker-unfold-clip-path($AE, $EG, $FN, $AQ, $BQ);
+
+  $fold-corner-transform: rotate(-$angle) translateX($height - $bend-width * 2);
+  $unfold-corner-transform: rotate(-$angle) translateX($height);
+
+  border-width: $border-width;
+  font-size: $font-size;
+  line-height: $line-height;
+  padding: $padding-y $padding-x;
+
+  clip-path: $fold-clip-path;
+
+  &::after {
+    height: $height;
+    width: $height;
+    top: -$border-width;
+    right: -$border-width;
+
+    transform: $fold-corner-transform;
+  }
+
+  &:hover {
+    clip-path: $unfold-clip-path;
+    &::after {
+      transform: $unfold-corner-transform;
+    }
+  }
+
+  // sticker fold on hover
+  &.btn-sticker-hover {
+    clip-path: $unfold-clip-path;
+    &::after {
+      transform: $unfold-corner-transform;
+    }
+    &:hover {
+      clip-path: $fold-clip-path;
+
+      &::after {
+        transform: $fold-corner-transform;
+      }
+    }
+  }
+
+  // static sticker button
+  &.btn-sticker-static {
+    &:hover {
+      clip-path: $fold-clip-path;
+      &::after {
+        transform: $fold-corner-transform;
+      }
+    }
+  }
+
+}

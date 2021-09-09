@@ -1,3 +1,5 @@
+// strip unit function
+
 @function strip-unit($number) {
   @if type-of($number) == "number" and not unitless($number) {
     @return $number / ($number * 0 + 1);
@@ -5,12 +7,14 @@
   @return $number;
 }
 
-///////////////////////////////////////////////////////////
-// Plain SASS Trigonometry Algorithm in Taylor Expansion //
-//                                                       //
-// Based on                                              //
-//      http://japborst.net/posts/sass-sines-and-cosines //
-///////////////////////////////////////////////////////////
+// px to rem
+
+@function pxToRem($value) {
+  $remValue: (strip-unit($value) / 16) + rem;
+  @return $remValue;
+}
+
+// trigonometry functions
 
 $pi: 3.14159265359;
 $_precision: 10;
@@ -22,7 +26,7 @@ $_precision: 10;
       $value: $value * $base;
     }
   }
-  @if $exp < 1{
+  @if $exp < 1 {
     @for $i from 0 through -$exp {
       $value: $value / $base;
     }
@@ -32,7 +36,7 @@ $_precision: 10;
 
 @function fact($num) {
   $fact: 1;
-  @if $num > 0{
+  @if $num > 0 {
     @for $i from 1 through $num {
       $fact: $fact * $i;
     }
@@ -50,7 +54,7 @@ $_precision: 10;
   @return $angle;
 }
 
-@function sin($angle){
+@function sin($angle) {
   $a: _to_unitless_rad($angle);
   $sin: $a;
   @for $n from 1 through $_precision {
@@ -59,7 +63,7 @@ $_precision: 10;
   @return $sin;
 }
 
-@function cos($angle){
+@function cos($angle) {
   $a: _to_unitless_rad($angle);
   $cos: 1;
   @for $n from 1 through $_precision {
@@ -68,6 +72,75 @@ $_precision: 10;
   @return $cos;
 }
 
-@function tan($angle){
+@function tan($angle) {
   @return sin($angle) / cos($angle);
+}
+
+// sticker functions
+
+@function sticker-height($border, $padding-y, $font-size, $line-height) {
+  $border-width-rem: ($border / 16px) * 1rem;
+  @return $border-width-rem * 2 + $padding-y * 2 + $font-size * $line-height;
+}
+
+@function sticker-fold-clip-path($AE, $EG, $FN) {
+
+  $point_1_x: 0;
+  $point_1_y: 0;
+
+  $point_2_x: calc(100% - #{$FN * 1rem});
+  $point_2_y: 0;
+
+  $point_3_x: calc(100% - #{$FN * 1rem});
+  $point_3_y: 0;
+
+  $point_4_x: calc(100% + #{($EG - $AE) * 1rem});
+  $point_4_y: 100%;
+
+  $point_5_x: calc(100% + #{($EG - $AE) * 1rem});
+  $point_5_y: 100%;
+
+  $point_6_x: 0;
+  $point_6_y: 100%;
+
+  @return polygon(
+                  $point_1_x $point_1_y,
+                  $point_2_x $point_2_y,
+                  $point_3_x $point_3_y,
+                  $point_4_x $point_4_y,
+                  $point_5_x $point_5_y,
+                  $point_6_x $point_6_y
+  );
+
+}
+
+@function sticker-unfold-clip-path($AE, $EG, $FN, $AQ, $BQ) {
+
+  $point_1_x: 0;
+  $point_1_y: 0;
+
+  $point_2_x: calc(100% - #{$FN * 1rem});
+  $point_2_y: 0;
+
+  $point_3_x: calc(100% - #{$FN * 1rem} + #{$AQ * 1rem});
+  $point_3_y: #{$BQ * -1rem};
+
+  $point_4_x: calc(100% + #{($EG - $AE) * 1rem} + #{$AQ * 1rem});
+  $point_4_y: calc(100% - #{$BQ * 1rem});
+
+  $point_5_x: calc(100% + #{($EG - $AE) * 1rem});
+  $point_5_y: 100%;
+
+  $point_6_x: 0;
+  $point_6_y: 100%;
+
+  @return polygon(
+                  $point_1_x $point_1_y,
+                  $point_2_x $point_2_y,
+                  $point_3_x $point_3_y,
+                  $point_4_x $point_4_y,
+                  $point_5_x $point_5_y,
+                  $point_6_x $point_6_y
+  );
+
 }
