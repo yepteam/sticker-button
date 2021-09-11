@@ -83,24 +83,29 @@ $_precision: 10;
   @return $border-width-rem * 2 + $padding-y * 2 + $font-size * $line-height;
 }
 
-@function sticker-fold-clip-path($AE, $EG, $FN) {
+@function sticker-fold-clip-path($right-side, $AE, $EG, $FN) {
 
-  $point_1_x: 0;
+  $point_1_x: 100%;
+  $point_2_x: calc(#{$FN * 1rem});
+  $point_3_x: calc(#{$FN * 1rem});
+  $point_4_x: calc(#{($EG - $AE) * -1rem});
+  $point_5_x: calc(#{($EG - $AE) * -1rem});
+  $point_6_x: 100%;
+
+  @if($right-side) {
+    $point_1_x: 0;
+    $point_2_x: calc(100% - #{$FN * 1rem});
+    $point_3_x: calc(100% - #{$FN * 1rem});
+    $point_4_x: calc(100% + #{($EG - $AE) * 1rem});
+    $point_5_x: calc(100% + #{($EG - $AE) * 1rem});
+    $point_6_x: 0;
+  }
+
   $point_1_y: 0;
-
-  $point_2_x: calc(100% - #{$FN * 1rem});
   $point_2_y: 0;
-
-  $point_3_x: calc(100% - #{$FN * 1rem});
   $point_3_y: 0;
-
-  $point_4_x: calc(100% + #{($EG - $AE) * 1rem});
   $point_4_y: 100%;
-
-  $point_5_x: calc(100% + #{($EG - $AE) * 1rem});
   $point_5_y: 100%;
-
-  $point_6_x: 0;
   $point_6_y: 100%;
 
   @return polygon(
@@ -114,24 +119,29 @@ $_precision: 10;
 
 }
 
-@function sticker-unfold-clip-path($AE, $EG, $FN, $AQ, $BQ) {
+@function sticker-unfold-clip-path($right-side, $AE, $EG, $FN, $AQ, $BQ) {
 
-  $point_1_x: 0;
+  $point_1_x: 100%;
+  $point_2_x: calc(#{$FN * 1rem});
+  $point_3_x: calc(#{($FN - $AQ) * 1rem});
+  $point_4_x: calc(#{($EG - $AE + $AQ) * -1rem});
+  $point_5_x: calc(#{($EG - $AE) * -1rem});
+  $point_6_x: 100%;
+
+  @if($right-side) {
+    $point_1_x: 0;
+    $point_2_x: calc(100% - #{$FN * 1rem});
+    $point_3_x: calc(100% - #{($FN - $AQ) * 1rem});
+    $point_4_x: calc(100% + #{($EG - $AE + $AQ) * 1rem});
+    $point_5_x: calc(100% + #{($EG - $AE) * 1rem});
+    $point_6_x: 0;
+  }
+
   $point_1_y: 0;
-
-  $point_2_x: calc(100% - #{$FN * 1rem});
   $point_2_y: 0;
-
-  $point_3_x: calc(100% - #{$FN * 1rem} + #{$AQ * 1rem});
   $point_3_y: #{$BQ * -1rem};
-
-  $point_4_x: calc(100% + #{($EG - $AE) * 1rem} + #{$AQ * 1rem});
   $point_4_y: calc(100% - #{$BQ * 1rem});
-
-  $point_5_x: calc(100% + #{($EG - $AE) * 1rem});
   $point_5_y: 100%;
-
-  $point_6_x: 0;
   $point_6_y: 100%;
 
   @return polygon(

@@ -18,9 +18,10 @@
   white-space: nowrap;
   position: relative;
   transition: clip-path $sticker-transition-time $sticker-transition-function;
+  box-shadow: none !important;
 
   @include sticker-variant(
-                  $sticker-corner-angle,
+                  $sticker-corner-angle-default,
                   $sticker-corner-size,
                   $sticker-line-height,
                   $sticker-padding-y,
@@ -46,7 +47,7 @@
   &.btn-sticker-lg {
 
     @include sticker-variant(
-                    $sticker-corner-angle,
+                    $sticker-corner-angle-default,
                     $sticker-corner-size,
                     $sticker-lg-line-height,
                     $sticker-lg-padding-y,
@@ -59,7 +60,7 @@
   &.btn-sticker-sm {
 
     @include sticker-variant(
-                    $sticker-corner-angle,
+                    $sticker-corner-angle-default,
                     $sticker-corner-size,
                     $sticker-sm-line-height,
                     $sticker-sm-padding-y,
@@ -67,6 +68,44 @@
                     $sticker-sm-border-width
     );
 
+  }
+
+  @each $angle in $sticker-corner-angle-variants {
+
+    &.btn-sticker-#{$angle} {
+
+      @include sticker-variant(
+                      $angle * 1deg,
+                      $sticker-corner-size,
+                      $sticker-line-height,
+                      $sticker-padding-y,
+                      $sticker-font-size,
+                      $sticker-border-width
+      );
+
+      &.btn-sticker-lg {
+        @include sticker-variant(
+                        $angle * 1deg,
+                        $sticker-corner-size,
+                        $sticker-lg-line-height,
+                        $sticker-lg-padding-y,
+                        $sticker-lg-font-size,
+                        $sticker-lg-border-width
+        );
+      }
+
+      &.btn-sticker-sm {
+        @include sticker-variant(
+                        $angle * 1deg,
+                        $sticker-corner-size,
+                        $sticker-sm-line-height,
+                        $sticker-sm-padding-y,
+                        $sticker-sm-font-size,
+                        $sticker-sm-border-width
+        );
+      }
+
+    }
   }
 
 }
@@ -78,7 +117,13 @@
   }
 }
 
-.btn-sticker-border-inherit {
+.btn-sticker-corner-border-inherit {
+  &::after {
+    border: inherit;
+  }
+}
+
+.btn-sticker-corner-border-inherit-fill {
   $height: sticker-height($sticker-border-width, $sticker-padding-y, $sticker-font-size, $sticker-line-height);
   $bend-width: $height * $sticker-corner-size;
   &::after {
@@ -86,3 +131,4 @@
     border-width: calc(#{$bend-width} + 1px);
   }
 }
+

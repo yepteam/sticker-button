@@ -1,5 +1,12 @@
 @mixin sticker-variant($angle, $bend, $line-height, $padding-y, $font-size, $border-width){
 
+  $sticker-corner-right-side: true;
+
+  @if $angle > 90deg and $angle < 270deg {
+    $sticker-corner-right-side: false;
+    $angle: (180deg - $angle);
+  }
+
   $height: sticker-height($border-width, $padding-y, $font-size, $line-height);
   $bend-width: $height * $bend;
 
@@ -18,11 +25,16 @@
   $AQ: strip-unit($bend-width) * $cosL;
   $BQ: strip-unit($bend-width) * $sinL;
 
-  $fold-clip-path: sticker-fold-clip-path($AE, $EG, $FN);
-  $unfold-clip-path: sticker-unfold-clip-path($AE, $EG, $FN, $AQ, $BQ);
+  $fold-clip-path: sticker-fold-clip-path($sticker-corner-right-side, $AE, $EG, $FN);
+  $unfold-clip-path: sticker-unfold-clip-path($sticker-corner-right-side, $AE, $EG, $FN, $AQ, $BQ);
 
-  $fold-corner-transform: rotate(-$angle) translateX($height - $bend-width * 2);
-  $unfold-corner-transform: rotate(-$angle) translateX($height);
+  $fold-corner-transform: rotate(#{180deg + $angle}) translateX(#{$bend-width * 2});
+  $unfold-corner-transform: rotate(#{180deg + $angle}) translateX(#{$height});
+  @if($sticker-corner-right-side){
+    $fold-corner-transform: rotate(-$angle) translateX($height - $bend-width * 2);
+    $unfold-corner-transform: rotate(-$angle) translateX($height);
+  }
+
 
   // height-related attributes
   border-width: $border-width;
@@ -42,7 +54,12 @@
 
     // border correction
     top: -$border-width;
-    right: -$border-width;
+    @if($sticker-corner-right-side) {
+      right: -$border-width;
+    }
+    @else {
+      left: -$border-width;
+    }
 
     transform: $fold-corner-transform;
   }
@@ -68,6 +85,22 @@
       -webkit-clip-path: $fold-clip-path;
       clip-path: $fold-clip-path;
 
+      &::after {
+        transform: $fold-corner-transform;
+      }
+    }
+  }
+
+  // Bootstrap 5 toggle button
+  &[data-bs-toggle="button"] {
+    -webkit-clip-path: $unfold-clip-path;
+    clip-path: $unfold-clip-path;
+    &::after {
+      transform: $unfold-corner-transform;
+    }
+    &.active {
+      -webkit-clip-path: $fold-clip-path;
+      clip-path: $fold-clip-path;
       &::after {
         transform: $fold-corner-transform;
       }

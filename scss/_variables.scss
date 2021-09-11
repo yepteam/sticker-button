@@ -19,10 +19,14 @@ $sticker-sm-font-size: .875rem !default;
 $sticker-sm-border-width: 1px !default;
 
 // Sticker corner settings
-$sticker-corner-angle: 30deg !default;
+$sticker-corner-angle-default: 45deg !default;
 $sticker-corner-size: 0.25 !default;
 $sticker-corner-bg-color: rgba(255, 255, 255, .5) !default;
 $sticker-corner-border: 1px solid #fff;
+
+$sticker-corner-angle-variants: (
+  0, 15, 30, 45, 135, 150, 165, 180, 195, 210, 225, 315, 330, 345
+);
 
 $sticker-corner-dark-bg-color: rgba(0, 0, 0, .5) !default;
 $sticker-corner-dark-border: 1px solid #000;
