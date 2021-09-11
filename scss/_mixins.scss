@@ -1,4 +1,4 @@
-@mixin sticker-variant($angle, $bend, $line-height, $padding-x, $padding-y, $font-size, $border-width){
+@mixin sticker-variant($angle, $bend, $line-height, $padding-y, $font-size, $border-width){
 
   $height: sticker-height($border-width, $padding-y, $font-size, $line-height);
   $bend-width: $height * $bend;
@@ -24,53 +24,50 @@
   $fold-corner-transform: rotate(-$angle) translateX($height - $bend-width * 2);
   $unfold-corner-transform: rotate(-$angle) translateX($height);
 
+  // height-related attributes
   border-width: $border-width;
   font-size: $font-size;
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
   line-height: $line-height;
-  padding: $padding-y $padding-x;
 
+  // clip-path
   -webkit-clip-path: $fold-clip-path;
   clip-path: $fold-clip-path;
 
+  // corner
   &::after {
     height: $height;
     width: $height;
+
+    // border correction
     top: -$border-width;
     right: -$border-width;
 
     transform: $fold-corner-transform;
   }
 
-  &:hover {
-    -webkit-clip-path: $unfold-clip-path;
-    clip-path: $unfold-clip-path;
-    &::after {
-      transform: $unfold-corner-transform;
-    }
-  }
-
-  // sticker fold on hover
-  &.btn-sticker-hover {
-    -webkit-clip-path: $unfold-clip-path;
-    clip-path: $unfold-clip-path;
-    &::after {
-      transform: $unfold-corner-transform;
-    }
+  &:not(.btn-sticker-corner-static){
     &:hover {
-      -webkit-clip-path: $fold-clip-path;
-      clip-path: $fold-clip-path;
-
+      -webkit-clip-path: $unfold-clip-path;
+      clip-path: $unfold-clip-path;
       &::after {
-        transform: $fold-corner-transform;
+        transform: $unfold-corner-transform;
       }
     }
   }
 
-  // static sticker button
-  &.btn-sticker-static {
+  // sticker fold on hover
+  &.btn-sticker-corner-hover {
+    -webkit-clip-path: $unfold-clip-path;
+    clip-path: $unfold-clip-path;
+    &::after {
+      transform: $unfold-corner-transform;
+    }
     &:hover {
       -webkit-clip-path: $fold-clip-path;
       clip-path: $fold-clip-path;
+
       &::after {
         transform: $fold-corner-transform;
       }

@@ -1,16 +1,31 @@
 // Variables
 
-$sticker-angle: 30deg !default;
-$sticker-line-height: 1 !default;
-$sticker-padding-y: 0.5rem !default;
-$sticker-padding-x: 1.25rem !default;
-$sticker-font-size: 2rem !default;
-$sticker-border-width: 2px !default;
+// Bootstrap 5 default height-related .btn values
+$sticker-line-height: 1.5 !default;
+$sticker-padding-y: .375rem !default;
+$sticker-font-size: 1rem !default;
+$sticker-border-width: 1px !default;
 
-$sticker-bend-size: 0.25 !default;
-$sticker-bend-bg-color: rgba(255, 255, 255, 1) !default;
-$sticker-bend-border-color: $sticker-bend-bg-color !default;
-$sticker-bend-border-width: 0 !default;
+// Bootstrap 5 default height-related .btn-lg values
+$sticker-lg-line-height: 1.5 !default;
+$sticker-lg-padding-y: .5rem !default;
+$sticker-lg-font-size: 1.25rem !default;
+$sticker-lg-border-width: 1px !default;
+
+// Bootstrap 5 default height-related .btn-sm values
+$sticker-sm-line-height: 1.5 !default;
+$sticker-sm-padding-y: .25rem !default;
+$sticker-sm-font-size: .875rem !default;
+$sticker-sm-border-width: 1px !default;
+
+// Sticker corner settings
+$sticker-corner-angle: 30deg !default;
+$sticker-corner-size: 0.25 !default;
+$sticker-corner-bg-color: rgba(255, 255, 255, .5) !default;
+$sticker-corner-border: 1px solid #fff;
+
+$sticker-corner-dark-bg-color: rgba(0, 0, 0, .5) !default;
+$sticker-corner-dark-border: 1px solid #000;
 
 $sticker-transition-time: 0.3s !default;
 $sticker-transition-function: ease-out !default;

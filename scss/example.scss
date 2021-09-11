@@ -1,28 +1,2 @@
-$sticker-angle: 30deg;
-$sticker-bend-size: .3;
-$sticker-line-height: 1;
-$sticker-padding-x: 1.5rem;
-$sticker-padding-y: 1rem;
-$sticker-font-size: 2rem;
-$sticker-border-width: 2px;
-
 @import "sticker";
 
-.btn-outline-success::after {
-  background-color: rgba(255, 255, 255, .2);
-  border: 2px solid var(--bs-success);
-}
-
-.btn-sticker-example-1 {
-
-  @include sticker-variant(
-                  -20deg,
-                  .3,
-                  1,
-                  1.5rem,
-                  1rem,
-                  2rem,
-                  2px
-  );
-
-}

@@ -20,10 +20,9 @@
   transition: clip-path $sticker-transition-time $sticker-transition-function;
 
   @include sticker-variant(
-                  $sticker-angle,
-                  $sticker-bend-size,
+                  $sticker-corner-angle,
+                  $sticker-corner-size,
                   $sticker-line-height,
-                  $sticker-padding-x,
                   $sticker-padding-y,
                   $sticker-font-size,
                   $sticker-border-width
@@ -34,13 +33,56 @@
     position: absolute;
     display: block;
     border-radius: 50rem;
-    background-color: $sticker-bend-bg-color;
-    border: $sticker-bend-border-width solid $sticker-bend-border-color;
+    background-color: $sticker-corner-bg-color;
+    border: $sticker-corner-border;
     transition: transform $sticker-transition-time $sticker-transition-function;
   }
 
   // sticker button with shadow
   &-shadow {
     filter: drop-shadow($sticker-shadow);
+  }
+
+  &.btn-sticker-lg {
+
+    @include sticker-variant(
+                    $sticker-corner-angle,
+                    $sticker-corner-size,
+                    $sticker-lg-line-height,
+                    $sticker-lg-padding-y,
+                    $sticker-lg-font-size,
+                    $sticker-lg-border-width
+    );
+
+  }
+
+  &.btn-sticker-sm {
+
+    @include sticker-variant(
+                    $sticker-corner-angle,
+                    $sticker-corner-size,
+                    $sticker-sm-line-height,
+                    $sticker-sm-padding-y,
+                    $sticker-sm-font-size,
+                    $sticker-sm-border-width
+    );
+
+  }
+
+}
+
+.btn-sticker-corner-dark {
+  &::after {
+    background-color: $sticker-corner-dark-bg-color;
+    border: $sticker-corner-dark-border;
+  }
+}
+
+.btn-sticker-border-inherit {
+  $height: sticker-height($sticker-border-width, $sticker-padding-y, $sticker-font-size, $sticker-line-height);
+  $bend-width: $height * $sticker-corner-size;
+  &::after {
+    border: inherit;
+    border-width: calc(#{$bend-width} + 1px);
   }
 }
