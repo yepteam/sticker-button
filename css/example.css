@@ -15,6 +15,7 @@
   font-size: 2rem;
   line-height: 1;
   padding: 1rem 1.5rem;
+  -webkit-clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%);
   clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%); }
   .btn-sticker::after {
     height: 4.25rem;
@@ -23,18 +24,22 @@
     right: -2px;
     transform: rotate(-30deg) translateX(1.7rem); }
   .btn-sticker:hover {
+    -webkit-clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem + 1.1041823898rem) -0.6375rem, calc(100% + 0.0833647797rem + 1.1041823898rem) calc(100% - 0.6375rem), calc(100% + 0.0833647797rem) 100%, 0 100%);
     clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem + 1.1041823898rem) -0.6375rem, calc(100% + 0.0833647797rem + 1.1041823898rem) calc(100% - 0.6375rem), calc(100% + 0.0833647797rem) 100%, 0 100%); }
     .btn-sticker:hover::after {
       transform: rotate(-30deg) translateX(4.25rem); }
   .btn-sticker.btn-sticker-hover {
+    -webkit-clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem + 1.1041823898rem) -0.6375rem, calc(100% + 0.0833647797rem + 1.1041823898rem) calc(100% - 0.6375rem), calc(100% + 0.0833647797rem) 100%, 0 100%);
     clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem + 1.1041823898rem) -0.6375rem, calc(100% + 0.0833647797rem + 1.1041823898rem) calc(100% - 0.6375rem), calc(100% + 0.0833647797rem) 100%, 0 100%); }
     .btn-sticker.btn-sticker-hover::after {
       transform: rotate(-30deg) translateX(4.25rem); }
     .btn-sticker.btn-sticker-hover:hover {
+      -webkit-clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%);
       clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-hover:hover::after {
         transform: rotate(-30deg) translateX(1.7rem); }
   .btn-sticker.btn-sticker-static:hover {
+    -webkit-clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%);
     clip-path: polygon(0 0, calc(100% - 2.3703738644rem) 0, calc(100% - 2.3703738644rem) 0, calc(100% + 0.0833647797rem) 100%, calc(100% + 0.0833647797rem) 100%, 0 100%); }
     .btn-sticker.btn-sticker-static:hover::after {
       transform: rotate(-30deg) translateX(1.7rem); }
@@ -58,6 +63,7 @@
   font-size: 2rem;
   line-height: 1;
   padding: 1rem 1.5rem;
+  -webkit-clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%);
   clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%); }
   .btn-sticker-example-1::after {
     height: 4.25rem;
@@ -66,18 +72,22 @@
     right: -2px;
     transform: rotate(20deg) translateX(1.7rem); }
   .btn-sticker-example-1:hover {
+    -webkit-clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem + 1.1981080915rem) 0.4360756827rem, calc(100% + -1.9938856412rem + 1.1981080915rem) calc(100% - -0.4360756827rem), calc(100% + -1.9938856412rem) 100%, 0 100%);
     clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem + 1.1981080915rem) 0.4360756827rem, calc(100% + -1.9938856412rem + 1.1981080915rem) calc(100% - -0.4360756827rem), calc(100% + -1.9938856412rem) 100%, 0 100%); }
     .btn-sticker-example-1:hover::after {
       transform: rotate(20deg) translateX(4.25rem); }
   .btn-sticker-example-1.btn-sticker-hover {
+    -webkit-clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem + 1.1981080915rem) 0.4360756827rem, calc(100% + -1.9938856412rem + 1.1981080915rem) calc(100% - -0.4360756827rem), calc(100% + -1.9938856412rem) 100%, 0 100%);
     clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem + 1.1981080915rem) 0.4360756827rem, calc(100% + -1.9938856412rem + 1.1981080915rem) calc(100% - -0.4360756827rem), calc(100% + -1.9938856412rem) 100%, 0 100%); }
     .btn-sticker-example-1.btn-sticker-hover::after {
       transform: rotate(20deg) translateX(4.25rem); }
     .btn-sticker-example-1.btn-sticker-hover:hover {
+      -webkit-clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%);
       clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%); }
       .btn-sticker-example-1.btn-sticker-hover:hover::after {
         transform: rotate(20deg) translateX(1.7rem); }
   .btn-sticker-example-1.btn-sticker-static:hover {
+    -webkit-clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%);
     clip-path: polygon(0 0, calc(100% - 0.4470121456rem) 0, calc(100% - 0.4470121456rem) 0, calc(100% + -1.9938856412rem) 100%, calc(100% + -1.9938856412rem) 100%, 0 100%); }
     .btn-sticker-example-1.btn-sticker-static:hover::after {
       transform: rotate(20deg) translateX(1.7rem); }

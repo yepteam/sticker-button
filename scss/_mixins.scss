@@ -29,6 +29,7 @@
   line-height: $line-height;
   padding: $padding-y $padding-x;
 
+  -webkit-clip-path: $fold-clip-path;
   clip-path: $fold-clip-path;
 
   &::after {
@@ -41,6 +42,7 @@
   }
 
   &:hover {
+    -webkit-clip-path: $unfold-clip-path;
     clip-path: $unfold-clip-path;
     &::after {
       transform: $unfold-corner-transform;
@@ -49,11 +51,13 @@
 
   // sticker fold on hover
   &.btn-sticker-hover {
+    -webkit-clip-path: $unfold-clip-path;
     clip-path: $unfold-clip-path;
     &::after {
       transform: $unfold-corner-transform;
     }
     &:hover {
+      -webkit-clip-path: $fold-clip-path;
       clip-path: $fold-clip-path;
 
       &::after {
@@ -65,6 +69,7 @@
   // static sticker button
   &.btn-sticker-static {
     &:hover {
+      -webkit-clip-path: $fold-clip-path;
       clip-path: $fold-clip-path;
       &::after {
         transform: $fold-corner-transform;
