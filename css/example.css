@@ -17,39 +17,39 @@
   padding-top: 0.375rem;
   padding-bottom: 0.375rem;
   line-height: 1.5;
-  -webkit-clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.5353106973rem) 0, calc(100% + 0.8396893027rem) 100%, calc(100% + 0.8396893027rem) 100%, 0 100%);
-  clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.5353106973rem) 0, calc(100% + 0.8396893027rem) 100%, calc(100% + 0.8396893027rem) 100%, 0 100%); }
+  -webkit-clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 1.1875rem) 0, calc(100% + 0.1837068893rem) 100%, calc(100% + 0.1837068893rem) 100%, 0 100%);
+  clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 1.1875rem) 0, calc(100% + 0.1837068893rem) 100%, calc(100% + 0.1837068893rem) 100%, 0 100%); }
   .btn-sticker::after {
     height: 2.375rem;
     width: 2.375rem;
     top: -1px;
     right: -1px;
-    transform: rotate(-45deg) translateX(1.1875rem); }
+    transform: rotate(-30deg) translateX(1.1875rem); }
   .btn-sticker:not(.btn-sticker-corner-static):hover {
-    -webkit-clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.115466046rem) -0.4198446513rem, calc(100% + 1.259533954rem) calc(100% - 0.4198446513rem), calc(100% + 0.8396893027rem) 100%, 0 100%);
-    clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.115466046rem) -0.4198446513rem, calc(100% + 1.259533954rem) calc(100% - 0.4198446513rem), calc(100% + 0.8396893027rem) 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 0.6732974165rem) -0.296875rem, calc(100% + 0.6979094728rem) calc(100% - 0.296875rem), calc(100% + 0.1837068893rem) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 0.6732974165rem) -0.296875rem, calc(100% + 0.6979094728rem) calc(100% - 0.296875rem), calc(100% + 0.1837068893rem) 100%, 0 100%); }
     .btn-sticker:not(.btn-sticker-corner-static):hover::after {
-      transform: rotate(-45deg) translateX(2.375rem); }
+      transform: rotate(-30deg) translateX(2.375rem); }
   .btn-sticker.btn-sticker-corner-hover {
-    -webkit-clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.115466046rem) -0.4198446513rem, calc(100% + 1.259533954rem) calc(100% - 0.4198446513rem), calc(100% + 0.8396893027rem) 100%, 0 100%);
-    clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.115466046rem) -0.4198446513rem, calc(100% + 1.259533954rem) calc(100% - 0.4198446513rem), calc(100% + 0.8396893027rem) 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 0.6732974165rem) -0.296875rem, calc(100% + 0.6979094728rem) calc(100% - 0.296875rem), calc(100% + 0.1837068893rem) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 0.6732974165rem) -0.296875rem, calc(100% + 0.6979094728rem) calc(100% - 0.296875rem), calc(100% + 0.1837068893rem) 100%, 0 100%); }
     .btn-sticker.btn-sticker-corner-hover::after {
-      transform: rotate(-45deg) translateX(2.375rem); }
+      transform: rotate(-30deg) translateX(2.375rem); }
     .btn-sticker.btn-sticker-corner-hover:hover {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.5353106973rem) 0, calc(100% + 0.8396893027rem) 100%, calc(100% + 0.8396893027rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.5353106973rem) 0, calc(100% + 0.8396893027rem) 100%, calc(100% + 0.8396893027rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 1.1875rem) 0, calc(100% + 0.1837068893rem) 100%, calc(100% + 0.1837068893rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 1.1875rem) 0, calc(100% + 0.1837068893rem) 100%, calc(100% + 0.1837068893rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-corner-hover:hover::after {
-        transform: rotate(-45deg) translateX(1.1875rem); }
+        transform: rotate(-30deg) translateX(1.1875rem); }
   .btn-sticker[data-bs-toggle="button"] {
-    -webkit-clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.115466046rem) -0.4198446513rem, calc(100% + 1.259533954rem) calc(100% - 0.4198446513rem), calc(100% + 0.8396893027rem) 100%, 0 100%);
-    clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.115466046rem) -0.4198446513rem, calc(100% + 1.259533954rem) calc(100% - 0.4198446513rem), calc(100% + 0.8396893027rem) 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 0.6732974165rem) -0.296875rem, calc(100% + 0.6979094728rem) calc(100% - 0.296875rem), calc(100% + 0.1837068893rem) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 0.6732974165rem) -0.296875rem, calc(100% + 0.6979094728rem) calc(100% - 0.296875rem), calc(100% + 0.1837068893rem) 100%, 0 100%); }
     .btn-sticker[data-bs-toggle="button"]::after {
-      transform: rotate(-45deg) translateX(2.375rem); }
+      transform: rotate(-30deg) translateX(2.375rem); }
     .btn-sticker[data-bs-toggle="button"].active {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.5353106973rem) 0, calc(100% + 0.8396893027rem) 100%, calc(100% + 0.8396893027rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.5353106973rem) 0, calc(100% - 1.5353106973rem) 0, calc(100% + 0.8396893027rem) 100%, calc(100% + 0.8396893027rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 1.1875rem) 0, calc(100% + 0.1837068893rem) 100%, calc(100% + 0.1837068893rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 1.1875rem) 0, calc(100% - 1.1875rem) 0, calc(100% + 0.1837068893rem) 100%, calc(100% + 0.1837068893rem) 100%, 0 100%); }
       .btn-sticker[data-bs-toggle="button"].active::after {
-        transform: rotate(-45deg) translateX(1.1875rem); }
+        transform: rotate(-30deg) translateX(1.1875rem); }
   .btn-sticker::after {
     content: "";
     position: absolute;
@@ -66,78 +66,78 @@
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     line-height: 1.5;
-    -webkit-clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.9393398282rem) 0, calc(100% + 1.0606601718rem) 100%, calc(100% + 1.0606601718rem) 100%, 0 100%);
-    clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.9393398282rem) 0, calc(100% + 1.0606601718rem) 100%, calc(100% + 1.0606601718rem) 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 1.5rem) 0, calc(100% + 0.2320508076rem) 100%, calc(100% + 0.2320508076rem) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 1.5rem) 0, calc(100% + 0.2320508076rem) 100%, calc(100% + 0.2320508076rem) 100%, 0 100%); }
     .btn-sticker.btn-sticker-lg::after {
       height: 3rem;
       width: 3rem;
       top: -1px;
       right: -1px;
-      transform: rotate(-45deg) translateX(1.5rem); }
+      transform: rotate(-30deg) translateX(1.5rem); }
     .btn-sticker.btn-sticker-lg:not(.btn-sticker-corner-static):hover {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.4090097423rem) -0.5303300859rem, calc(100% + 1.5909902577rem) calc(100% - 0.5303300859rem), calc(100% + 1.0606601718rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.4090097423rem) -0.5303300859rem, calc(100% + 1.5909902577rem) calc(100% - 0.5303300859rem), calc(100% + 1.0606601718rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 0.8504809472rem) -0.375rem, calc(100% + 0.8815698604rem) calc(100% - 0.375rem), calc(100% + 0.2320508076rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 0.8504809472rem) -0.375rem, calc(100% + 0.8815698604rem) calc(100% - 0.375rem), calc(100% + 0.2320508076rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-lg:not(.btn-sticker-corner-static):hover::after {
-        transform: rotate(-45deg) translateX(3rem); }
+        transform: rotate(-30deg) translateX(3rem); }
     .btn-sticker.btn-sticker-lg.btn-sticker-corner-hover {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.4090097423rem) -0.5303300859rem, calc(100% + 1.5909902577rem) calc(100% - 0.5303300859rem), calc(100% + 1.0606601718rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.4090097423rem) -0.5303300859rem, calc(100% + 1.5909902577rem) calc(100% - 0.5303300859rem), calc(100% + 1.0606601718rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 0.8504809472rem) -0.375rem, calc(100% + 0.8815698604rem) calc(100% - 0.375rem), calc(100% + 0.2320508076rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 0.8504809472rem) -0.375rem, calc(100% + 0.8815698604rem) calc(100% - 0.375rem), calc(100% + 0.2320508076rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-lg.btn-sticker-corner-hover::after {
-        transform: rotate(-45deg) translateX(3rem); }
+        transform: rotate(-30deg) translateX(3rem); }
       .btn-sticker.btn-sticker-lg.btn-sticker-corner-hover:hover {
-        -webkit-clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.9393398282rem) 0, calc(100% + 1.0606601718rem) 100%, calc(100% + 1.0606601718rem) 100%, 0 100%);
-        clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.9393398282rem) 0, calc(100% + 1.0606601718rem) 100%, calc(100% + 1.0606601718rem) 100%, 0 100%); }
+        -webkit-clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 1.5rem) 0, calc(100% + 0.2320508076rem) 100%, calc(100% + 0.2320508076rem) 100%, 0 100%);
+        clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 1.5rem) 0, calc(100% + 0.2320508076rem) 100%, calc(100% + 0.2320508076rem) 100%, 0 100%); }
         .btn-sticker.btn-sticker-lg.btn-sticker-corner-hover:hover::after {
-          transform: rotate(-45deg) translateX(1.5rem); }
+          transform: rotate(-30deg) translateX(1.5rem); }
     .btn-sticker.btn-sticker-lg[data-bs-toggle="button"] {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.4090097423rem) -0.5303300859rem, calc(100% + 1.5909902577rem) calc(100% - 0.5303300859rem), calc(100% + 1.0606601718rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.4090097423rem) -0.5303300859rem, calc(100% + 1.5909902577rem) calc(100% - 0.5303300859rem), calc(100% + 1.0606601718rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 0.8504809472rem) -0.375rem, calc(100% + 0.8815698604rem) calc(100% - 0.375rem), calc(100% + 0.2320508076rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 0.8504809472rem) -0.375rem, calc(100% + 0.8815698604rem) calc(100% - 0.375rem), calc(100% + 0.2320508076rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-lg[data-bs-toggle="button"]::after {
-        transform: rotate(-45deg) translateX(3rem); }
+        transform: rotate(-30deg) translateX(3rem); }
       .btn-sticker.btn-sticker-lg[data-bs-toggle="button"].active {
-        -webkit-clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.9393398282rem) 0, calc(100% + 1.0606601718rem) 100%, calc(100% + 1.0606601718rem) 100%, 0 100%);
-        clip-path: polygon(0 0, calc(100% - 1.9393398282rem) 0, calc(100% - 1.9393398282rem) 0, calc(100% + 1.0606601718rem) 100%, calc(100% + 1.0606601718rem) 100%, 0 100%); }
+        -webkit-clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 1.5rem) 0, calc(100% + 0.2320508076rem) 100%, calc(100% + 0.2320508076rem) 100%, 0 100%);
+        clip-path: polygon(0 0, calc(100% - 1.5rem) 0, calc(100% - 1.5rem) 0, calc(100% + 0.2320508076rem) 100%, calc(100% + 0.2320508076rem) 100%, 0 100%); }
         .btn-sticker.btn-sticker-lg[data-bs-toggle="button"].active::after {
-          transform: rotate(-45deg) translateX(1.5rem); }
+          transform: rotate(-30deg) translateX(1.5rem); }
   .btn-sticker.btn-sticker-sm {
     border-width: 1px;
     font-size: 0.875rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
     line-height: 1.5;
-    -webkit-clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 1.2524903057rem) 0, calc(100% + 0.6850096943rem) 100%, calc(100% + 0.6850096943rem) 100%, 0 100%);
-    clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 1.2524903057rem) 0, calc(100% + 0.6850096943rem) 100%, calc(100% + 0.6850096943rem) 100%, 0 100%); }
+    -webkit-clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.96875rem) 0, calc(100% + 0.1498661466rem) 100%, calc(100% + 0.1498661466rem) 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.96875rem) 0, calc(100% + 0.1498661466rem) 100%, calc(100% + 0.1498661466rem) 100%, 0 100%); }
     .btn-sticker.btn-sticker-sm::after {
       height: 1.9375rem;
       width: 1.9375rem;
       top: -1px;
       right: -1px;
-      transform: rotate(-45deg) translateX(0.96875rem); }
+      transform: rotate(-30deg) translateX(0.96875rem); }
     .btn-sticker.btn-sticker-sm:not(.btn-sticker-corner-static):hover {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 0.9099854586rem) -0.3425048471rem, calc(100% + 1.0275145414rem) calc(100% - 0.3425048471rem), calc(100% + 0.6850096943rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 0.9099854586rem) -0.3425048471rem, calc(100% + 1.0275145414rem) calc(100% - 0.3425048471rem), calc(100% + 0.6850096943rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.549268945rem) -0.2421875rem, calc(100% + 0.5693472015rem) calc(100% - 0.2421875rem), calc(100% + 0.1498661466rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.549268945rem) -0.2421875rem, calc(100% + 0.5693472015rem) calc(100% - 0.2421875rem), calc(100% + 0.1498661466rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-sm:not(.btn-sticker-corner-static):hover::after {
-        transform: rotate(-45deg) translateX(1.9375rem); }
+        transform: rotate(-30deg) translateX(1.9375rem); }
     .btn-sticker.btn-sticker-sm.btn-sticker-corner-hover {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 0.9099854586rem) -0.3425048471rem, calc(100% + 1.0275145414rem) calc(100% - 0.3425048471rem), calc(100% + 0.6850096943rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 0.9099854586rem) -0.3425048471rem, calc(100% + 1.0275145414rem) calc(100% - 0.3425048471rem), calc(100% + 0.6850096943rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.549268945rem) -0.2421875rem, calc(100% + 0.5693472015rem) calc(100% - 0.2421875rem), calc(100% + 0.1498661466rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.549268945rem) -0.2421875rem, calc(100% + 0.5693472015rem) calc(100% - 0.2421875rem), calc(100% + 0.1498661466rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-sm.btn-sticker-corner-hover::after {
-        transform: rotate(-45deg) translateX(1.9375rem); }
+        transform: rotate(-30deg) translateX(1.9375rem); }
       .btn-sticker.btn-sticker-sm.btn-sticker-corner-hover:hover {
-        -webkit-clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 1.2524903057rem) 0, calc(100% + 0.6850096943rem) 100%, calc(100% + 0.6850096943rem) 100%, 0 100%);
-        clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 1.2524903057rem) 0, calc(100% + 0.6850096943rem) 100%, calc(100% + 0.6850096943rem) 100%, 0 100%); }
+        -webkit-clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.96875rem) 0, calc(100% + 0.1498661466rem) 100%, calc(100% + 0.1498661466rem) 100%, 0 100%);
+        clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.96875rem) 0, calc(100% + 0.1498661466rem) 100%, calc(100% + 0.1498661466rem) 100%, 0 100%); }
         .btn-sticker.btn-sticker-sm.btn-sticker-corner-hover:hover::after {
-          transform: rotate(-45deg) translateX(0.96875rem); }
+          transform: rotate(-30deg) translateX(0.96875rem); }
     .btn-sticker.btn-sticker-sm[data-bs-toggle="button"] {
-      -webkit-clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 0.9099854586rem) -0.3425048471rem, calc(100% + 1.0275145414rem) calc(100% - 0.3425048471rem), calc(100% + 0.6850096943rem) 100%, 0 100%);
-      clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 0.9099854586rem) -0.3425048471rem, calc(100% + 1.0275145414rem) calc(100% - 0.3425048471rem), calc(100% + 0.6850096943rem) 100%, 0 100%); }
+      -webkit-clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.549268945rem) -0.2421875rem, calc(100% + 0.5693472015rem) calc(100% - 0.2421875rem), calc(100% + 0.1498661466rem) 100%, 0 100%);
+      clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.549268945rem) -0.2421875rem, calc(100% + 0.5693472015rem) calc(100% - 0.2421875rem), calc(100% + 0.1498661466rem) 100%, 0 100%); }
       .btn-sticker.btn-sticker-sm[data-bs-toggle="button"]::after {
-        transform: rotate(-45deg) translateX(1.9375rem); }
+        transform: rotate(-30deg) translateX(1.9375rem); }
       .btn-sticker.btn-sticker-sm[data-bs-toggle="button"].active {
-        -webkit-clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 1.2524903057rem) 0, calc(100% + 0.6850096943rem) 100%, calc(100% + 0.6850096943rem) 100%, 0 100%);
-        clip-path: polygon(0 0, calc(100% - 1.2524903057rem) 0, calc(100% - 1.2524903057rem) 0, calc(100% + 0.6850096943rem) 100%, calc(100% + 0.6850096943rem) 100%, 0 100%); }
+        -webkit-clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.96875rem) 0, calc(100% + 0.1498661466rem) 100%, calc(100% + 0.1498661466rem) 100%, 0 100%);
+        clip-path: polygon(0 0, calc(100% - 0.96875rem) 0, calc(100% - 0.96875rem) 0, calc(100% + 0.1498661466rem) 100%, calc(100% + 0.1498661466rem) 100%, 0 100%); }
         .btn-sticker.btn-sticker-sm[data-bs-toggle="button"].active::after {
-          transform: rotate(-45deg) translateX(0.96875rem); }
+          transform: rotate(-30deg) translateX(0.96875rem); }
   .btn-sticker.btn-sticker-0 {
     border-width: 1px;
     font-size: 1rem;
@@ -1782,10 +1782,19 @@
   border: 1px solid #000; }
 
 .btn-sticker-corner-border-inherit::after {
-  border: inherit; }
+  border-color: inherit;
+  border-width: inherit; }
 
 .btn-sticker-corner-border-inherit-fill::after {
-  border: inherit;
+  border-color: inherit;
   border-width: calc(0.59375rem + 1px); }
+
+.example--w-125px {
+  width: 125px; }
+
+.highlight {
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  background-color: #f8f9fa; }
 
 /*# sourceMappingURL=example.css.map */

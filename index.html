@@ -20,6 +20,19 @@
         <h2>Examples</h2>
 
         <div class="mb-4">
+            <div class="d-inline-block p-2">
+                <button type="button" class="btn btn-sticker btn-primary">Sticker Button</button>
+            </div>
+            <div class="highlight">
+                <code>
+                    &lt;button type="button" class="btn-sticker"&gt;Sticker Button&lt;/button&gt;
+                </code>
+            </div>
+        </div>
+
+        <div class="mb-4">
+
+            <h4>Bootstrap 5 buttons</h4>
 
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-sticker btn-sticker-corner-border-inherit btn-primary">Primary</button>
@@ -45,11 +58,20 @@
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-sticker btn-sticker-corner-border-inherit btn-dark">Dark</button>
             </div>
+
+            <div class="highlight">
+                <code>
+                    &lt;button type="button" class="btn btn-sticker btn-sticker-corner-border-inherit btn-primary"&gt;Sticker Button&lt;/button&gt;
+                </code>
+            </div>
+
+            <p>Use <code>.btn-sticker-corner-border-inherit</code> class to copy corner border style from button.</p>
+            <p>The <code>.btn-sticker-corner-dark</code> class sets the corner background to dark style.</p>
         </div>
 
-        <h2>Outline buttons</h2>
-
         <div class="mb-4">
+
+            <h3>Bootstrap 5 outline buttons</h3>
 
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-sticker btn-sticker-corner-border-inherit-fill btn-outline-primary">Primary</button>
@@ -75,19 +97,81 @@
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-sticker btn-sticker-corner-border-inherit-fill btn-outline-dark">Dark</button>
             </div>
+
+            <p>Use <code>.btn-sticker-corner-border-inherit-fill</code> class to fill whole corner background with button border color.</p>
         </div>
 
-        <h2>Sizes</h2>
+        <h3>Sticker corner angle</h3>
 
         <div class="mb-4">
 
+            <div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-315 btn-sticker-corner-border-inherit btn-primary">Angle 315°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-330 btn-sticker-corner-border-inherit btn-primary">Angle 330°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-345 btn-sticker-corner-border-inherit btn-primary">Angle 345°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-0 btn-sticker-corner-border-inherit btn-primary">Angle 0°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-15 btn-sticker-corner-border-inherit btn-primary">Angle 15°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-30 btn-sticker-corner-border-inherit btn-primary">Angle 30°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-45 btn-sticker-corner-border-inherit btn-primary">Angle 45°</button>
+                </div>
+            </div>
+            <div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-135 btn-sticker-corner-border-inherit btn-primary">Angle 135°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-150 btn-sticker-corner-border-inherit btn-primary">Angle 150°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-165 btn-sticker-corner-border-inherit btn-primary">Angle 165°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-180 btn-sticker-corner-border-inherit btn-primary">Angle 180°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-195 btn-sticker-corner-border-inherit btn-primary">Angle 195°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-210 btn-sticker-corner-border-inherit btn-primary">Angle 210°</button>
+                </div>
+                <div class="d-inline-block p-2">
+                    <button type="button" class="example--w-125px btn btn-sticker btn-sticker-225 btn-sticker-corner-border-inherit btn-primary">Angle 225°</button>
+                </div>
+
+                <div class="highlight">
+                    <code>
+                        <span class="text-muted">// Sass variable</span><br>
+                        $sticker-corner-angle-variants: (0, 15, 30, 45, 135, 150, 165, 180, 195, 210, 225, 315, 330, 345);
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <h3>Sizes</h3>
+
+        <div class="mb-4">
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-lg btn-sticker btn-sticker-lg btn-primary">Large button</button>
             </div>
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-lg btn-sticker btn-sticker-lg btn-secondary">Large button</button>
             </div>
-
+            <div class="highlight">
+                <code>btn-sticker btn-sticker-lg</code>
+            </div>
         </div>
 
         <div class="mb-4">
@@ -97,113 +181,53 @@
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-sm btn-sticker btn-sticker-sm btn-secondary">Small button</button>
             </div>
-
+            <div class="highlight">
+                <code>btn-sticker btn-sticker-sm</code>
+            </div>
         </div>
 
-        <h2>Static corner</h2>
-
+        <h3>Static corner</h3>
         <div class="mb-4">
-
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-lg btn-sticker btn-sticker-corner-static btn-sticker-lg btn-primary">Primary button</button>
             </div>
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-lg btn-sticker btn-sticker-corner-static btn-sticker-lg btn-secondary">Button</button>
             </div>
-
+            <div class="highlight">
+                <code>btn-sticker btn-sticker-corner-static</code>
+            </div>
         </div>
 
-        <h2>Show corner on hover</h2>
-
+        <h3>Show corner on hover</h3>
         <div class="mb-4">
-
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-lg btn-sticker btn-sticker-corner-hover btn-sticker-lg btn-primary">Primary button</button>
             </div>
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-lg btn-sticker btn-sticker-corner-hover btn-sticker-lg btn-secondary">Button</button>
             </div>
-
+            <div class="highlight">
+                <code>btn-sticker btn-sticker-corner-hover</code>
+            </div>
         </div>
 
-        <h2>Bootstrap 5 Disabled state</h2>
-
+        <h3>Bootstrap 5 Toggle states</h3>
         <div class="mb-4">
-
-            <div class="d-inline-block p-2">
-                <button type="button" class="btn btn-lg btn-sticker btn-sticker-lg btn-primary" disabled>Primary button</button>
-            </div>
-            <div class="d-inline-block p-2">
-                <button type="button" class="btn btn-lg btn-sticker btn-sticker-lg btn-secondary" disabled>Button</button>
-            </div>
-
-        </div>
-
-        <h2>Bootstrap 5 Toggle states</h2>
-
-        <div class="mb-4">
-
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-primary btn-sticker" data-bs-toggle="button" autocomplete="off">Toggle button</button>
             </div>
             <div class="d-inline-block p-2">
                 <button type="button" class="btn btn-primary btn-sticker active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
             </div>
-
-        </div>
-
-        <h2>Sticker corner angle</h2>
-
-        <div class="mb-4">
-
-            <div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-315 btn-sticker-corner-border-inherit btn-primary">Angle 315°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-330 btn-sticker-corner-border-inherit btn-primary">Angle 330°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-345 btn-sticker-corner-border-inherit btn-primary">Angle 345°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-0 btn-sticker-corner-border-inherit btn-primary">Angle 0°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-15 btn-sticker-corner-border-inherit btn-primary">Angle 15°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-30 btn-sticker-corner-border-inherit btn-primary">Angle 30°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-45 btn-sticker-corner-border-inherit btn-primary">Angle 45°</button>
-                </div>
-            </div>
-            <div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-135 btn-sticker-corner-border-inherit btn-primary">Angle 135°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-150 btn-sticker-corner-border-inherit btn-primary">Angle 150°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-165 btn-sticker-corner-border-inherit btn-primary">Angle 165°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-180 btn-sticker-corner-border-inherit btn-primary">Angle 180°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-195 btn-sticker-corner-border-inherit btn-primary">Angle 195°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-210 btn-sticker-corner-border-inherit btn-primary">Angle 210°</button>
-                </div>
-                <div class="d-inline-block p-2">
-                    <button type="button" class="btn btn-sticker btn-sticker-225 btn-sticker-corner-border-inherit btn-primary">Angle 225°</button>
-                </div>
+            <div class="highlight">
+                <code>
+                    &lt;button type="button" class="btn btn-primary btn-sticker" data-bs-toggle="button" autocomplete="off"&gt;Toggle button&lt;/button&gt;
+                    <br>
+                    &lt;button type="button" class="btn btn-primary btn-sticker active" data-bs-toggle="button" autocomplete="off" aria-pressed="true"&gt;Toggle button&lt;/button&gt;
+                </code>
             </div>
         </div>
-
 
     </div>
 </div>
