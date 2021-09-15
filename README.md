@@ -2,7 +2,8 @@
 
 CSS-only sticker button with animated folding corner.
 
-# Using with Bootstrap 5
+Using with Bootstrap 5
+---
 
 1. Include Bootstrap 5 stlye file and compiled `sticker.css` file in `head` tag:
 ```
