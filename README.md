@@ -20,3 +20,19 @@ Using with Bootstrap 5
 <a href="#" class="btn-sticker">Sticker Button</a>
 
 ```
+
+Sass customization
+---
+
+You will find the complete list of variables in scss/_variables.scss
+
+```
+// Default variable overrides
+$sticker-line-height: 1;
+$sticker-padding-y: .5rem;
+$sticker-font-size: 1.25rem;
+$sticker-border-width: 2px;
+$sticker-corner-angle-default: 45deg;
+
+@import "sticker.scss"
+```
