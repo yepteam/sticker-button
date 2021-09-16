@@ -7,7 +7,7 @@ Demo: https://yepteam.github.io/sticker-button/
 Using with Bootstrap 5
 ---
 
-1. Include Bootstrap 5 stlye file and compiled `sticker.css` file inside `<head>` tag:
+1. Include Bootstrap 5 style file and compiled `sticker.css` file inside `<head>` tag:
 ```
 <head>
 
