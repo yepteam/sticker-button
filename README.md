@@ -45,5 +45,5 @@ $sticker-font-size: 1.25rem;
 $sticker-border-width: 2px;
 $sticker-corner-angle-default: 45deg;
 
-@import "dist/sticker.scss"
+@import "src/sticker.scss"
 ```
