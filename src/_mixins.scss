@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin sticker-variant($angle, $bend, $line-height, $padding-y, $font-size, $border-width){
 
   $sticker-corner-right-side: true;
@@ -14,10 +16,10 @@
   $cosLL: cos(90deg - $angle);
   $sinL: sin($angle);
 
-  $AE: strip-unit($height / 2);
-  $AB: strip-unit($height / 2 - $bend-width);
-  $AC: $AB / $cosL;
-  $CF: $AE / $cosL;
+  $AE: strip-unit($height * .5);
+  $AB: strip-unit($height * .5 - $bend-width);
+  $AC: math.div($AB, $cosL);
+  $CF: math.div($AE, $cosL);
   $FM: $CF * $cosLL;
   $EG: $AC + $FM;
   $FN: $AE - ($AC - $FM);

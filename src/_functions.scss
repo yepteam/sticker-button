@@ -9,13 +9,6 @@
   @return $number;
 }
 
-// px to rem
-
-@function pxToRem($value) {
-  $remValue: (strip-unit($value) / 16) + rem;
-  @return $remValue;
-}
-
 // trigonometry functions
 
 $pi: 3.14159265359;
@@ -30,7 +23,7 @@ $_precision: 10;
   }
   @if $exp < 1 {
     @for $i from 0 through -$exp {
-      $value: $value / $base;
+      $value: math.div($value, $base);
     }
   }
   @return $value;
@@ -48,10 +41,10 @@ $_precision: 10;
 
 @function _to_unitless_rad($angle) {
   @if unit($angle) == "deg" {
-    $angle: $angle / 180deg * $pi;
+    $angle: math.div($angle, 180deg) * $pi;
   }
   @if unit($angle) == "rad" {
-    $angle: $angle / 1rad;
+    $angle: math.div($angle, 1rad);
   }
   @return $angle;
 }
@@ -60,7 +53,7 @@ $_precision: 10;
   $a: _to_unitless_rad($angle);
   $sin: $a;
   @for $n from 1 through $_precision {
-    $sin: $sin + (pow(-1, $n) / fact(2 * $n + 1) ) * pow($a, (2 * $n + 1));
+    $sin: $sin + ( math.div(pow(-1, $n), fact(2 * $n + 1)) ) * pow($a, (2 * $n + 1));
   }
   @return $sin;
 }
@@ -69,19 +62,19 @@ $_precision: 10;
   $a: _to_unitless_rad($angle);
   $cos: 1;
   @for $n from 1 through $_precision {
-    $cos: $cos + ( pow(-1,$n) / fact(2*$n) ) * pow($a,2*$n);
+    $cos: $cos + ( math.div(pow(-1,$n), fact(2*$n)) ) * pow($a,2*$n);
   }
   @return $cos;
 }
 
 @function tan($angle) {
-  @return sin($angle) / cos($angle);
+  @return math.div(sin($angle), cos($angle));
 }
 
 // sticker functions
 
 @function sticker-height($border, $padding-y, $font-size, $line-height) {
-  $border-width-rem: ($border / 16px) * 1rem;
+  $border-width-rem: math.div($border, 16px) * 1rem;
   @return $border-width-rem * 2 + $padding-y * 2 + $font-size * $line-height;
 }
 
