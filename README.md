@@ -17,7 +17,7 @@ Using with Bootstrap 5
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
       crossorigin="anonymous">
       
-<link rel="stylesheet" href="css/example.css">
+<link rel="stylesheet" href="dist/example.css">
 
 ...
 
@@ -45,5 +45,5 @@ $sticker-font-size: 1.25rem;
 $sticker-border-width: 2px;
 $sticker-corner-angle-default: 45deg;
 
-@import "sticker.scss"
+@import "dist/sticker.scss"
 ```
