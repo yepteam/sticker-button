@@ -24,15 +24,15 @@ $sticker-corner-size: 0.25 !default;
 
 $sticker-corner-angle-variants: (
         0, 15, 30, 45, 135, 150, 165, 180, 195, 210, 225, 315, 330, 345
-);
+) !default;
 
 // Sticker corner default style
 $sticker-corner-bg-color: rgba(255, 255, 255, .5) !default;
-$sticker-corner-border: 1px solid #fff;
+$sticker-corner-border: 1px solid #fff !default;;
 
 // Sticker corner dark style
 $sticker-corner-dark-bg-color: rgba(0, 0, 0, .5) !default;
-$sticker-corner-dark-border: 1px solid #000;
+$sticker-corner-dark-border: 1px solid #000 !default;
 
 $sticker-transition-time: 0.3s !default;
 $sticker-transition-function: ease-out !default;
