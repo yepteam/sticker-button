@@ -17,6 +17,7 @@
   position: relative;
   transition: clip-path $sticker-transition-time $sticker-transition-function;
   box-shadow: none !important;
+  overflow: hidden;
 
   @include sticker-variant(
                   $sticker-corner-angle-default,
