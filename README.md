@@ -1,5 +1,7 @@
 # Peel Off Sticker Buttons
 
+<img width="370" alt="button" src="https://user-images.githubusercontent.com/2047645/147366253-e713f960-46b8-424c-b7f2-26610a4fecd2.png">
+
 CSS-only sticker button with animated folding corner.
 
 Demo: https://yepteam.github.io/sticker-button/
