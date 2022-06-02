@@ -10,7 +10,7 @@ Using with Bootstrap 5
 ---
 
 1. Include Bootstrap 5 style file and compiled `sticker.css` file inside `<head>` tag:
-```
+```html
 <head>
 
 ...
@@ -28,7 +28,7 @@ Using with Bootstrap 5
 
 2. Add class `btn-sticker` to bootstrap button:
 
-```
+```html
 <button type="button" class="btn-sticker">Sticker Button</button>
 <a href="#" class="btn-sticker">Sticker Button</a>
 
@@ -39,7 +39,7 @@ Sass customization
 
 You will find the complete list of variables in `src/_variables.scss`
 
-```
+```scss
 // Default variable overrides
 $sticker-line-height: 1;
 $sticker-padding-y: .5rem;
