@@ -37,7 +37,7 @@ Using with Bootstrap 5
 Sass customization
 ---
 
-You will find the complete list of variables in `src/_variables.scss`
+See `src/_variables.scss`
 
 ```scss
 // Default variable overrides
